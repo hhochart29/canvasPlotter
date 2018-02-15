@@ -5,39 +5,42 @@ const W = 800
 const H = 600
 
 const max = 50
+const maxSquare = 50
+const pointsPerFace = 10
+const amplitude = 5
 
+const step = H / 2 / maxSquare
 const random = factor => {
   return Math.random() * factor
 }
 
-const pointsPerFace = 10
 
 const monCarre = (ctx, x, y, c) => {
   ctx.beginPath()
-  ctx.moveTo(x + random(10), y + random(5))
+  ctx.moveTo(x + random(amplitude), y + random(amplitude))
   let i
   let currentX = x
   let currentY = y
 
   for (i = 0; i < pointsPerFace; i++) {
-    ctx.lineTo(currentX + c / pointsPerFace * i, currentY + random(2))
+    ctx.lineTo(currentX + c / pointsPerFace * i, currentY + random(amplitude))
   }
   currentX = x + c
   currentY = y
 
   for (i = 0; i < pointsPerFace; i++) {
-    ctx.lineTo(currentX + random(2), currentY + c / pointsPerFace * i)
+    ctx.lineTo(currentX + random(amplitude), currentY + c / pointsPerFace * i)
   }
   currentX = x + c
   currentY = y + c
   for (i = 0; i < pointsPerFace; i++) {
-    ctx.lineTo(currentX - i * c / pointsPerFace, currentY + random(2))
+    ctx.lineTo(currentX - i * c / pointsPerFace, currentY + random(amplitude))
   }
   currentX = x
   currentY = y + c
 
   for (i = 0; i < pointsPerFace; i++) {
-    ctx.lineTo(currentX + random(2), currentY - i * c / pointsPerFace)
+    ctx.lineTo(currentX + random(amplitude), currentY - i * c / pointsPerFace)
   }
 
   ctx.closePath()
@@ -45,9 +48,9 @@ const monCarre = (ctx, x, y, c) => {
 }
 
 let i
-for (i = 0; i < 400; i++) {
-  const x = Math.random() * W
-  const y = Math.random() * H
-  const c = Math.random() * max
+for (i = 0; i < maxSquare; i++) {
+  const x = i * step
+  const y = i * step
+  const c = H - i * step * 2
   monCarre(ctx, x, y, c)
 }
