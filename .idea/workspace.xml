@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/main.js" line="50" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f520759-df6d-4f3f-bdde-51ba01776450" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
-    </list>
+    <list default="true" id="6f520759-df6d-4f3f-bdde-51ba01776450" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -205,12 +202,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518685103874</updated>
-      <workItem from="1518685105014" duration="4260000" />
+      <workItem from="1518685105014" duration="4355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4260000" />
+    <option name="totallyTimeSpent" value="4355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="19" width="1924" height="1075" extended-state="6" />
